@@ -1,12 +1,12 @@
 {
-  "name": "antiban",
+  "name": "XD",
   "version": "1.0.0",
-  "description": "",
+  "description": "bot",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "rishu",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^13.0.0",
