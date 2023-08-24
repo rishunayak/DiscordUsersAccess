@@ -55,7 +55,6 @@ client.on('message', async (message) => {
             await member.send(options);
             message.reply(`Sent DM to ${member.user.tag}`);
             await new Promise((resolve) => setTimeout(resolve, Math.floor(Math.random() * 9) + 1)*1000); 
-            messageCount++;
             
           } catch (error) {
             
