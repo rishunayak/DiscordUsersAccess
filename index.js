@@ -1,8 +1,17 @@
 require("dotenv").config()
 const Discord = require('discord.js');
+const express = require('express');
 
 const token = process.env.token
+const app = express();
+app.get('/', (req, res) => {
+  res.send('Bot is running.'); // Respond with a message
+});
 
+const PORT =3000; // Use the environment variable or a default port
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
 
 
 const intents = new Discord.Intents([
