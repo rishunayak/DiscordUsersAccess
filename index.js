@@ -1,7 +1,7 @@
 require("dotenv").config()
 const Discord = require('discord.js');
 
-const token = process.env.token;
+const token = process.env.token
 
 
 
@@ -29,11 +29,11 @@ client.on('message', async (message) => {
       if (message.member.permissions.has('ADMINISTRATOR')) {
         try {
           const guild = message.guild;
-          const content = message.content.substring('!dm'.length).trim(); 
+          const content = message.content.substring('!user'.length).trim(); 
 
           const attachment = message.attachments.first();
           const image = attachment ? attachment.url : null;
-          const newGuild = await client.guilds.fetch(guild.id);
+          const newGuild = await client.guilds.fetch(guild.id); 
           if (newGuild) {
 
       
@@ -45,8 +45,9 @@ client.on('message', async (message) => {
       for (const [memberId, member] of newGuild.members.cache) { 
         if (!member.user.bot && memberId !== client.user.id &&  member.roles.cache.some((role) => role.name === "USER")) {
           try {
+            console.log(content)
             const options = { 
-              content: `Hey ${member}, \n\n **XD BYPASS** \n\n  **${content}** \n\n`};
+              content: `Hey ${member}, \n\n  **${content}** \n\n`};
           
             if (image) {
               options.files = [image];
