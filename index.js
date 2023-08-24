@@ -45,7 +45,7 @@ client.on('message', async (message) => {
       for (const [memberId, member] of newGuild.members.cache) { 
         if (!member.user.bot && memberId !== client.user.id &&  member.roles.cache.some((role) => role.name === "USER")) {
           try {
-            console.log(content)
+       
             const options = { 
               content: `Hey ${member}, \n\n  **${content}** \n\n`};
           
